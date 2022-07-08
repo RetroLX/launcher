@@ -9,7 +9,7 @@ System::System(QObject *parent)
 
 void System::reboot() const
 {
-    QProcess::startDetached(QString("reboot"));
+    QProcess::startDetached(QString("reboot"), {});
 }
 
 void System::shutdown() const
