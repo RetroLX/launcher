@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = retropie-frontendchooser
+TARGET = retrolx-launcher
 
 QT += quick gamepad
 CONFIG += c++11

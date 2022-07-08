@@ -10,4 +10,5 @@ public:
     explicit System(QObject *parent = nullptr);
 
     Q_INVOKABLE void reboot() const;
+    Q_INVOKABLE void shutdown() const;
 };

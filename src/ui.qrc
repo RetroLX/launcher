@@ -2,14 +2,14 @@
     <qresource prefix="/">
         <file>ui/main.qml</file>
         <file>ui/MainButton.qml</file>
-        <file>ui/logo/attract.png</file>
         <file>ui/logo/es.png</file>
-        <file>ui/logo/meh.png</file>
         <file>ui/logo/pegasus.png</file>
         <file>ui/FrontendDelegate.qml</file>
         <file>ui/Title.qml</file>
         <file>ui/InstallLog.qml</file>
         <file>ui/Message.qml</file>
         <file>ui/Question.qml</file>
+        <file>ui/logo/retroarch.png</file>
+        <file>ui/logo/retrofe.png</file>
     </qresource>
 </RCC>

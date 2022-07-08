@@ -16,24 +16,10 @@ QList<QObject*> create_model()
     return {
         new Frontend(
             QStringLiteral("EmulationStation"),
-            QStringLiteral("Frontend used by RetroPie for launching emulators (default)."),
+            QStringLiteral("Frontend used by RetroLX for launching emulators (default)."),
             QStringLiteral("es.png"),
             QStringLiteral("emulationstation"),
             QStringLiteral("emulationstation")
-        ),
-        new Frontend(
-            QStringLiteral("AttractMode"),
-            QStringLiteral("Attract-Mode is a graphical frontend for command line emulators such as MAME, MESS and Nestopia."),
-            QStringLiteral("attract.png"),
-            QStringLiteral("attractmode"),
-            QStringLiteral("attract")
-        ),
-        new Frontend(
-            QStringLiteral("mehstation"),
-            QStringLiteral("Open-source frontend launcher for your retrobox."),
-            QStringLiteral("meh.png"),
-            QStringLiteral("mehstation"),
-            QStringLiteral("mehstation")
         ),
         new Frontend(
             QStringLiteral("Pegasus"),
@@ -41,6 +27,20 @@ QList<QObject*> create_model()
             QStringLiteral("pegasus.png"),
             QStringLiteral("pegasus-fe"),
             QStringLiteral("pegasus-fe")
+        ),
+        new Frontend(
+            QStringLiteral("RetroArch"),
+            QStringLiteral("RetroArch is a frontend for emulators, game engines and media players."),
+            QStringLiteral("retroarch.png"),
+            QStringLiteral("retroarch"),
+            QStringLiteral("retroarch")
+        ),
+        new Frontend(
+            QStringLiteral("RetroFE"),
+            QStringLiteral("RetroFE is a graphical frontend for command line emulators such as MAME, MESS and Nestopia."),
+            QStringLiteral("retrofe.png"),
+            QStringLiteral("retrofe"),
+            QStringLiteral("retrofe")
         ),
     };
 }
@@ -53,8 +53,8 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
 
-    qInfo() << "Frontend Chooser for RetroPie";
-    qInfo() << "Created by Mátyás Mustoha";
+    qInfo() << "RetroLX Launcher";
+    qInfo() << "Based on RetroPie Frontend Chooser for RetroPie by Mátyás Mustoha";
 
     const QList<QObject*> frontendModel(create_model());
     Installer installer;

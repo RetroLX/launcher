@@ -1,7 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Window 2.0
-import QtGamepad 1.0
-
+import QtGamepad 1.12
 
 Window {
     visible: true
