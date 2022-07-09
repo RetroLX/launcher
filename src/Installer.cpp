@@ -6,22 +6,14 @@
 
 Installer::Installer(QObject* parent)
     : QObject(parent)
-    , m_pkgman_path(QDir::homePath() + QStringLiteral("/RetroPie-Setup/retropie_packages.sh"))
     , m_task_running(false)
     , m_task_failed(false)
 {
     m_process.setProcessChannelMode(QProcess::MergedChannels);
-    // m_process.setWorkingDirectory(QStringLiteral("/home/pi"));
     connect(&m_process, &QProcess::readyRead, this, &Installer::onProcessReadyRead);
     connect(&m_process, &QProcess::errorOccurred, this, &Installer::onProcessError);
     connect(&m_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
             this, &Installer::onProcessFinished);
-}
-
-bool Installer::retropieAvailable() const
-{
-    const QFileInfo pkgman(m_pkgman_path);
-    return pkgman.exists() && pkgman.isFile() && pkgman.isExecutable();
 }
 
 bool Installer::installed(Frontend* frontend) const

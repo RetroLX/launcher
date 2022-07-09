@@ -7,7 +7,7 @@ Window {
     width: 1280
     height: 720
     color: "#223"
-    title: qsTr("Frontend Chooser for RetroPie")
+    title: qsTr("Welcome to RetroLX")
 
     property real winScale: Math.min(width / 1280.0, height / 720.0)
     function vpx(value) {
@@ -17,8 +17,6 @@ Window {
     readonly property int windowMargin: vpx(30)
 
     Component.onCompleted: {
-        if (!installer.retropieAvailable)
-            retropieMissing.focus = true;
     }
 
 
@@ -152,11 +150,5 @@ Window {
         id: autorunSetDefaultFailed
         text: "ERROR: Could not change the autoruns file. Perhaps it's write-protected?"
         onAccepted: grid.focus = true
-    }
-
-    Message {
-        id: retropieMissing
-        text: "ERROR: This program is for RetroPie, but RetroPie doesn't seem to be installed. The program will now close."
-        onAccepted: close()
     }
 }
