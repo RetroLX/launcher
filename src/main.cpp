@@ -54,7 +54,6 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     qInfo() << "RetroLX Launcher";
-    qInfo() << "Based on RetroPie Frontend Chooser for RetroPie by Mátyás Mustoha";
 
     const QList<QObject*> frontendModel(create_model());
     Installer installer;
