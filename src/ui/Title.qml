@@ -5,14 +5,14 @@ Row {
 
     Text {
         id: mainLabel
-        text: "Frontend Chooser"
+        text: "RetroLX"
         color: "#dde"
         font.bold: true
         font.pixelSize: vpx(45)
     }
 
     Text {
-        text: "for RetroPie"
+        text: "launcher"
         color: "#dde"
         font.pixelSize: vpx(20)
 
