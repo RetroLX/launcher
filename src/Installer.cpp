@@ -33,11 +33,11 @@ void Installer::startInstall(Frontend* frontend)
     Q_ASSERT(m_process.state() != QProcess::Running);
 
     const QStringList arguments {
-        frontend->m_package_name,
-        QStringLiteral("install")
+        QStringLiteral("install"),
+        frontend->m_package_name
     };
 
-    m_log = QStringLiteral("Launching `") + m_pkgman_path;
+    m_log = QStringLiteral("retrolx-pacman");
     for (const QString& arg : arguments)
         m_log += ' ' + arg;
     m_log += "`...\n";
@@ -48,7 +48,7 @@ void Installer::startInstall(Frontend* frontend)
     emit taskRunChanged();
     emit taskFailChanged();
 
-    m_process.start(m_pkgman_path, arguments, QIODevice::ReadOnly);
+    m_process.start(QStringLiteral("retrolx-pacman"), arguments, QIODevice::ReadOnly);
 }
 
 void Installer::onProcessReadyRead()
